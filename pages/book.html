@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книга - Книжный Мини Апп</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/book.css">
+    <link rel="stylesheet" href="../css/book_slider.css">
+</head>
+<body>
+    <div class="container">
+        <main id="book-details">
+            <div class="book-container">
+                <h2 class="book-title" id="book-title"></h2>
+                <img class="book-image" id="book-image" src="" alt="Book Cover">
+                <div class="book-info">
+                  <p>Автор: <span id="book-author"></span></p>
+                  <p>Год публикации: <span id="book-year"></span></p>
+                  <p>Категории: <span id="book-categories"></span></p>
+                  <div class="book-description">
+                    <p id="book-description-content"></p>
+                  </div>
+                  <p>Цена: <span id="book-price"></span></p>
+                </div>
+                <button class="buy-button" id="buy-button">Купить</button>
+              </div>
+        </main>   
+
+        <footer>
+            <p>&copy; 2023 Книжный Мини Апп</p>
+        </footer>
+    </div>
+
+    <script src="../script/script.js"></script>
+    <script src="../script/book.js"></script>
+</body>
+</html>

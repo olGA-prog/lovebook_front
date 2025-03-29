@@ -1,0 +1,136 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #3498db;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Series Details Styles */
+#series-details {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#series-details img {
+    width: 100%;
+    height: auto; /* Keep aspect ratio */
+    display: block; /* Remove extra space below image */
+    transition: transform 0.3s ease;
+}
+
+#series-details:hover img {
+    transform: scale(1.05);
+}
+
+.series-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    color: white;
+    padding: 20px;
+    text-align: left;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.series-overlay h2 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.series-overlay p {
+    font-size: 1.1em;
+}
+
+/* Books in Series Styles */
+#series-books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.book-item {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.book-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#series-books .book-item {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Add delay for each book */
+#series-books .book-item:nth-child(1) { animation-delay: 0.1s; }
+#series-books .book-item:nth-child(2) { animation-delay: 0.2s; }
+#series-books .book-item:nth-child(3) { animation-delay: 0.3s; }

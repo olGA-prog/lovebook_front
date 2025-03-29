@@ -1,0 +1,66 @@
+#cart-items {
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Разделитель между элементами корзины */
+    padding-bottom: 15px;
+}
+
+.cart-item img {
+    width: 80px; /* Размер изображения книги */
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.cart-item-details {
+    flex-grow: 1; /* Занимает все доступное пространство */
+}
+
+.cart-item-details h3 {
+    font-size: 1em; /* Уменьшенный размер заголовка */
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    font-weight: bold; /* Выделяем цену */
+}
+
+/* Кнопка "Удалить" */
+.remove-from-cart {
+    background-color: #f44336; /* Красный цвет для кнопки */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Итоговая сумма */
+#cart-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right; /* Выравнивание по правому краю */
+}
+
+/* Кнопка оформления заказа */
+#checkout-button {
+    background-color: #007bff; /* Синий цвет для кнопки */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    display: block; /* Чтобы кнопка занимала всю ширину */
+    margin-top: 20px;
+}
+
+#checkout-button:hover {
+    background-color: #0056b3; /* Более темный оттенок синего при наведении */
+}

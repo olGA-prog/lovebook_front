@@ -1,0 +1,182 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f8f8f8; /* Светлый фон */
+    color: #333;
+}
+
+.container {
+    max-width: 600px; /* Ограничиваем ширину контента для читаемости */
+    margin: 0 auto; /* Центрируем контент */
+    padding: 16px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+header input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+}
+
+.category-filter {
+    display: flex;
+    overflow-x: auto; /* Горизонтальная прокрутка для категорий */
+    white-space: nowrap; /* Предотвращаем перенос текста */
+}
+
+.category-button {
+    background-color: #eee;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    color: #555;
+    transition: background-color 0.3s ease; /* Плавное изменение фона */
+}
+
+.category-button.active {
+    background-color: #007bff; /* Синий цвет для активной категории */
+    color: white;
+}
+
+main {
+    margin-bottom: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.swiper {
+  width: 100%;
+  padding: 20px 0; /* Add some top and bottom padding */
+}
+
+.swiper-slide {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+
+.swiper-slide:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.swiper-slide p {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+.series-slide {
+  position: relative;
+  width: 100%;
+  height: 200px; 
+  overflow: hidden; 
+  border-radius: 10px; 
+}
+
+/* Image Styles */
+.series-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the entire space */
+  transition: transform 0.3s ease; /* Optional: Add a zoom effect */
+}
+.series-slide:hover .series-image {
+  transform: scale(1.1); /* Optional: Zoom on hover */
+}
+.series-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.021) 100%);
+  color: white;
+  padding: 10px;
+  text-align: left; /* Adjust as needed */
+}
+
+.series-title {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.series-author {
+  margin: 0;
+  font-size: 0.9em;
+}
+.author-image {
+  width: 100px; /* Adjust author image size */
+  height: 100px;
+  border-radius: 50%; /* Make author images circular */
+  object-fit: cover; /* Crop images to fit the circle */
+  margin-bottom: 10px;
+}
+
+/* Pagination */
+.swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #3498db;
+  transform: scale(1.2); /* Slightly bigger on active state */
+}
+
+/* Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  background: transparent;
+  color: #333; /* Button text color */
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #000;
+}
+
+/* Responsive Design (Example) */
+@media (max-width: 768px) {
+  .swiper-slide {
+      padding: 15px;
+  }
+  .swiper {
+    height: auto; /* Allow the height to adjust on smaller screens */
+  }
+}

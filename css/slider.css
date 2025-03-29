@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px; /* Slightly smaller base font size */
+}
+
+.clear {
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+  border: 0px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+
+a:focus,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover {
+  color: #e73700;
+}
+
+h2 {
+  margin-bottom: 32px; /* Reduced margin */
+  padding-bottom: 12px; /* Reduced padding */
+  font-size: 16px; /* Reduced font size */
+  line-height: 24px; /* Adjusted line height */
+  font-weight: 700;
+  position: relative;
+  text-transform: capitalize;
+}
+
+h3 {
+  margin: 0 0 8px; /* Reduced margin */
+  font-size: 20px; /* Reduced font size */
+  line-height: 28px; /* Adjusted line height */
+}
+
+button {
+  outline: none !important;
+}
+
+/******* Common Element CSS End *********/
+
+/* -------- title style ------- */
+.line-title {
+  position: relative;
+  width: 300px; /* Reduced width */
+}
+
+.line-title::before,
+.line-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px; /* Reduced height */
+  border-radius: 2px;
+}
+
+.line-title::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+
+.line-title::after {
+  width: 24px; /* Reduced width */
+  background: #e73700;
+}
+
+.game-section {
+  padding: 40px 30px;
+  
+}
+
+.game-section .owl-stage {
+  margin: 10px 0; /* Reduced margin */
+  display: flex;
+  display: -webkit-flex;
+}
+
+.game-section .item {
+  margin: 0 10px 40px; /* Reduced margin */
+  width: 80px; /* Reduced width */
+  height: 140px; /* Reduced height */
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: #343434 no-repeat center center / cover;
+  border-radius: 12px; /* Reduced border-radius */
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.game-section .item.active {
+  width: 140px; /* Reduced width */
+  box-shadow: 8px 28px 28px rgba(0, 0, 0, 0.25); /* Reduced shadow */
+  -webkit-box-shadow: 8px 28px 28px rgba(0, 0, 0, 0.25); /* Reduced shadow */
+}
+
+.game-section .item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.game-section .item-desc {
+  padding: 0 16px 8px; /* Reduced padding */
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateY(calc(100% - 40px)); /* Adjusted transform */
+  -webkit-transform: translateY(calc(100% - 40px)); /* Adjusted transform */
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+
+.game-section .item.active .item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+
+.game-section .item-desc p {
+  opacity: 0;
+  -webkit-transform: translateY(24px); /* Adjusted transform */
+  transform: translateY(24px); /* Adjusted transform */
+}

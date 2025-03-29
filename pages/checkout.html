@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление Заказа - Книжный Мини Апп</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Оформление Заказа</h1>
+        </header>
+
+        <main>
+            <div class="selected-book-content">
+
+            </div>
+            <form id="checkout-form">
+                <label for="name">ФИО:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Эл.почта:</label>
+                <textarea id="address" name="address" required></textarea>
+
+                <button type="submit">Оплатить</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Книжный Мини Апп</p>
+        </footer>
+    </div>
+    <script src="../script/api.js"></script>
+    <script src="../script/script.js"></script>
+    <script src="../script/cheakout.js"></script>
+</body>
+</html>

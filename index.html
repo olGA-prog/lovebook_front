@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Книжный Мини Апп</title>
+    <link rel="stylesheet" href="./css/styles.css"> 
+    <link rel="stylesheet" href="./css/main.css"> 
+    <link rel="stylesheet" href="./css/slider.css"> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <input type="text" id="search-input" placeholder="Поиск книг...">
+            <div class="category-filter">
+            </div>
+        </header>
+
+        <main>
+            <section id="popular-books">
+                <h2>Популярные Книги</h2>
+                <div class="book-grid" id="book-grid">
+                </div>
+            </section>
+
+            
+
+            <section id="series-slider">
+              <h2>По Сериям</h2>
+              <div class="swiper">
+                  <div class="swiper-wrapper" id="series-slider-content">
+                      <!-- Slides will be dynamically added here -->
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+            </section>
+
+            <section id="author-slider">
+              <h2>По Авторам</h2>
+              <div class="swiper">
+                  <div class="swiper-wrapper" id="author-slider-content">
+                      <!-- Slides will be dynamically added here -->
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+            </section>
+
+            
+            
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Книжный Мини Апп</p>
+        </footer>
+    </div>
+    <script src="./script/api.js"></script> 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./script/script.js"></script> 
+    <script src="./script/slider.js"></script> 
+    <script src="./script/index.js"></script> 
+    
+
+</body>
+</html>

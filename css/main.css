@@ -1,0 +1,29 @@
+#popular-books {
+    margin-bottom: 20px;
+  }
+  
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .book-item {
+    text-align: center;
+  }
+  
+  .book-cover {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out; /* Плавное изменение при наведении */
+  }
+  
+  .book-cover:hover {
+    transform: translateY(-5px); /* Эффект "поднятия" при наведении */
+  }
+  
+  .book-title {
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
