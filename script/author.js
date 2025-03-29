@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   if (authorData) {
-      url_image=`${ApiURL}/static/${authorData.image}.jpg`;
+      url_image=`${ApiURL}/staticfiles/${authorData.image}.jpg`;
       console.log(url_image)
       authorDetailsDiv.innerHTML = `
           <img src="${url_image}" alt="${authorData.name}">
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
           const authorBooks = books.filter(book => book.author === authorData.id);
           if (authorBooks.length > 0) {
               authorBooks.forEach((book, index) => {
-                  url_image=`${ApiURL}/static/${book.image}.jpg`;
+                  url_image=`${ApiURL}/staticfiles/${book.image}.jpg`;
                   const bookItem = document.createElement("div");
                   bookItem.classList.add("book-item");
                   bookItem.style.animationDelay = `${0.1 * (index + 1)}s`;

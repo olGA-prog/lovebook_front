@@ -51,7 +51,7 @@ function displayBooks(category, booksData) {
     filteredBooks.forEach(book => {
         const bookItem = document.createElement("div");
         bookItem.classList.add("book-item");
-        url_image=`${ApiURL}/static/${book.image}.jpg`;
+        url_image=`${ApiURL}/staticfiles/${book.image}.jpg`;
         console.log(url_image)
         bookItem.innerHTML = `
             <img src="${url_image}" alt="${book.title}" class="book-cover">
@@ -135,7 +135,7 @@ function displaySliderSeries(seriesData) {
       slide.classList.add('swiper-slide');
       slide.innerHTML = `
           <div class="series-slide">
-              <img class="series-image" src="${ApiURL}/static/${series.image}.png" alt="${series.name}">
+              <img class="series-image" src="${ApiURL}/staticfiles/${series.image}.png" alt="${series.name}">
               <div class="series-overlay">
                   <h3 class="series-title">${series.name}</h3>
               </div>
@@ -155,7 +155,7 @@ function displaySliderSeries(seriesData) {
   authorsData.forEach(author => {
       const slide = document.createElement('div');
       slide.classList.add('swiper-slide');
-      slide.innerHTML = `<div class="author-slide"><img class="author-image" src="${ApiURL}/static/${author.image}.jpg"><p>${author.name}</p></div>`; 
+      slide.innerHTML = `<div class="author-slide"><img class="author-image" src="${ApiURL}/staticfiles/${author.image}.jpg"><p>${author.name}</p></div>`; 
       slide.addEventListener("click", () => {
         localStorage.setItem("selectedAuthor", JSON.stringify(author));
         window.location.href = "./pages/author.html";

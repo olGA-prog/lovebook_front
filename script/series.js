@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if (seriesData) {
       seriesNameSpan.textContent = seriesData.name; 
-      url_image=`${ApiURL}/static/${seriesData.image}.png`;
+      url_image=`${ApiURL}/staticfiles/${seriesData.image}.png`;
       console.log(url_image)
       seriesDetailsDiv.innerHTML = `
           <img src="${url_image}" alt="${seriesData.name}">
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
                   const bookItem = document.createElement("div");
                   bookItem.classList.add("book-item");
                   bookItem.style.animationDelay = `${0.1 * (index + 1)}s`; 
-                  url_image=`${ApiURL}/static/${book.image}.jpg`;
+                  url_image=`${ApiURL}/staticfiles/${book.image}.jpg`;
                   bookItem.innerHTML = `
                       <img src="${url_image}" alt="${book.title}">
                       <p>${book.title}</p>

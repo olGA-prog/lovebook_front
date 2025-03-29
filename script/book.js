@@ -27,7 +27,7 @@ const authors = {
 let bookData = JSON.parse(localStorage.getItem("selectedBook"));
 
 if (bookData) {
-        let url_image = `${ApiURL}/static/${bookData.image}.jpg`;
+        let url_image = `${ApiURL}/staticfiles/${bookData.image}.jpg`;
 
         bookTitleElement.textContent = bookData.title;
         bookImageElement.src = url_image;
