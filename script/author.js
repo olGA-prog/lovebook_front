@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <img src="${url_image}" alt="${authorData.name}">
           <div class="author-info">
               <h2>${authorData.name}</h2>
-              <p>${authorData.description || 'No biography available.'}</p>
+              <p>${authorData.description || 'Нет биографии автора.'}</p>
           </div>
       `;
 
@@ -49,13 +49,13 @@ document.addEventListener("DOMContentLoaded", function() {
                   authorBooksDiv.appendChild(bookItem);
               });
           } else {
-              authorBooksDiv.innerHTML = "<p>No books found by this author.</p>";
+              authorBooksDiv.innerHTML = "<p>Книги данного автора не найдены.</p>";
           }
       } else{
           authorBooksDiv.innerHTML = "<p>No books currently stored, please add books</p>";
       }
 
   } else {
-      authorDetailsDiv.innerHTML = "<p>Author data not found.</p>";
+      authorDetailsDiv.innerHTML = "<p>Автор не найден.</p>";
   }
 });

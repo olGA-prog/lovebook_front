@@ -41,7 +41,7 @@ if (bookData) {
         bookDescriptionContentElement.textContent = bookData.description;
         bookPriceElement.textContent = bookData.price;
     } else {
-        bookDetailsDiv.innerHTML = "<p>Book data not found.</p>";
+        bookDetailsDiv.innerHTML = "<p>Нет информации.</p>";
     }
 
 
