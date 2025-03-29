@@ -43,7 +43,7 @@ header input[type="text"] {
     border-radius: 20px;
     margin-right: 5px;
     cursor: pointer;
-    color: #555;
+    color: var(--tg-theme-text-color);;
     transition: background-color 0.3s ease; /* Плавное изменение фона */
 }
 
@@ -89,7 +89,7 @@ footer {
 .swiper-slide p {
   margin-top: 10px;
   font-weight: 500;
-  color: #333;
+  color: var(--tg-theme-text-color);
 }
 
 .series-slide {
@@ -175,6 +175,16 @@ footer {
 @media (max-width: 768px) {
   .swiper-slide {
       padding: 15px;
+  }
+  .swiper {
+    height: auto; /* Allow the height to adjust on smaller screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .swiper-slide {
+      padding: 5px;
+      width: 80%;
   }
   .swiper {
     height: auto; /* Allow the height to adjust on smaller screens */
