@@ -1,10 +1,9 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    background-color: #f8f8f8; /* Светлый фон */
-    color: #333;
+    background-color: var(--tg-theme-bg-color); /* Светлый фон */
+    color: var(--tg-theme-text-color);
 }
-
 .container {
     max-width: 600px; /* Ограничиваем ширину контента для читаемости */
     margin: 0 auto; /* Центрируем контент */
@@ -24,10 +23,11 @@ header h1 {
 header input[type="text"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--tg-theme-hint-color);
     border-radius: 5px;
     margin-bottom: 10px;
     box-sizing: border-box; /* Учитываем padding и border в общей ширине */
+    background-color: var(--tg-theme-secondary-bg-color);
 }
 
 .category-filter {
@@ -37,7 +37,7 @@ header input[type="text"] {
 }
 
 .category-button {
-    background-color: #eee;
+    background-color: var(--tg-theme-button-color);
     border: none;
     padding: 8px 12px;
     border-radius: 20px;
@@ -49,7 +49,7 @@ header input[type="text"] {
 
 .category-button.active {
     background-color: #007bff; /* Синий цвет для активной категории */
-    color: white;
+    color: var(--tg-theme-button-text-color);
 }
 
 main {
@@ -68,7 +68,7 @@ footer {
 }
 
 .swiper-slide {
-  background: #fff;
+  background: var(--tg-theme-secondary-bg-color);
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   text-align: center;
@@ -147,12 +147,12 @@ footer {
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background-color: #ccc;
+  background-color: var(--tg-theme-header-bg-color);
   opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #3498db;
+  background-color: var(--tg-theme-button-color);
   transform: scale(1.2); /* Slightly bigger on active state */
 }
 
@@ -160,7 +160,7 @@ footer {
 .swiper-button-prev,
 .swiper-button-next {
   background: transparent;
-  color: #333; /* Button text color */
+  color: var(--tg-theme-button-color); /* Button text color */
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;

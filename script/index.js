@@ -9,6 +9,31 @@ let activeCategory = "all";
 let bookDataSave;
 const ApiURL = 'https://djangopro123.pythonanywhere.com/'
 
+
+let tg = window.Telegram.WebApp; 
+tg.expand()
+const user = tg.initDataUnsafe.user; 
+alert(user)
+if (user) {
+    const userData = {
+    user_id: user.id.toString(),
+    username: user.username || '',
+    first_name: user.first_name || '',
+    last_name: user.last_name || ''
+};
+
+fetch(`${ApiURL}save_user/`, {
+      method: 'POST',
+      headers: {
+      'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData)
+})
+.then(response => response.json())
+.then(data => console.log('User saved:', data))
+.catch(error => console.error('Error saving user:', error));
+}
+
 async function loadData() {
   try {
     const categoryData = await getCategories();
