@@ -47,7 +47,7 @@ if (bookData) {
 
     buyButton.addEventListener("click", function() {
       localStorage.setItem("BookforBuy", JSON.stringify(bookData));
-      window.location.href = "../checkout.html";
+      window.location.href = "./checkout.html";
     });
 
 

@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         );
         const paymentData = {
             amount: bookData.price,
+            bookData: bookData,
             name: name,
             email: email,
             idempotency_key: generateIdempotencyKey() // VERY IMPORTANT - generate this randomly!
