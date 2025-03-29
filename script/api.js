@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://127.0.0.1:8000/app/';  // Base URL for your API
+const API_BASE_URL = 'https://djangopro123.pythonanywhere.com/app/';  // Base URL for your API
 
 // Helper function to handle API requests and errors
 async function handleRequest(url, options = {}) {

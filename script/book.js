@@ -11,7 +11,7 @@ const bookDescription = document.querySelector(".book-description");
 const bookDescriptionContentElement = document.getElementById("book-description-content");
 
 
-const ApiURL = 'http://127.0.0.1:8000';
+const ApiURL = 'https://djangopro123.pythonanywhere.com';
 
     // Mock category and author data for demonstration
 const categories = {

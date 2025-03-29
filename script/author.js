@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   const authorDetailsDiv = document.getElementById("author-details");
   const authorBooksDiv = document.getElementById("author-books");
-  const ApiURL = 'http://127.0.0.1:8000/'
+  const ApiURL = 'https://djangopro123.pythonanywhere.com'
 
  // Check for edge cases for proper properties
  let authorData = null
