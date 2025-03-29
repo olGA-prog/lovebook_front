@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--tg-theme-bg-color);
+    color:var(--tg-theme-text-color);
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body {
   .book-container {
     width: 80%;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: var(--tg-theme-secondary-bg-color);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -23,7 +23,7 @@ body {
 
   .book-title {
     font-size: 2em;
-    color: #2c3e50; /* Darker title color */
+    color: var(--tg-theme-accent-text-color); /* Darker title color */
     margin-bottom: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
   }
@@ -42,7 +42,7 @@ body {
   .book-info {
     margin-top: 15px;
     padding: 10px;
-    border-left: 3px solid #000000; /* Emphasize the info section */
+    border-left: 3px solid var(--tg-theme-accent-text-color); /* Emphasize the info section */
   }
 
   .book-info p {
@@ -58,8 +58,8 @@ body {
   
   /* Buy Button Styles */
   .buy-button {
-    background-color: #2ecc71; /* Green */
-    color: white;
+    background-color: var(--tg-theme-button-color); /* Green */
+    color: var(--tg-theme-button-text-color);
     border: none;
     padding: 12px 20px;
     border-radius: 5px;
@@ -71,6 +71,6 @@ body {
   }
 
   .buy-button:hover {
-    background-color: #27ae60; /* Darker shade on hover */
+    background-color: var(--tg-theme-button-color); /* Darker shade on hover */
     transform: scale(1.05); /* Scale up slightly on hover */
   }

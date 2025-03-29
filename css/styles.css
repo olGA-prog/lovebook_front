@@ -28,6 +28,7 @@ header input[type="text"] {
     margin-bottom: 10px;
     box-sizing: border-box; /* Учитываем padding и border в общей ширине */
     background-color: var(--tg-theme-secondary-bg-color);
+    color:var(--tg-theme-text-color); 
 }
 
 .category-filter {
@@ -37,7 +38,7 @@ header input[type="text"] {
 }
 
 .category-button {
-    background-color: var(--tg-theme-button-color);
+    background-color: var(--tg-theme-secondary-bg-color);
     border: none;
     padding: 8px 12px;
     border-radius: 20px;
@@ -48,7 +49,7 @@ header input[type="text"] {
 }
 
 .category-button.active {
-    background-color: #007bff; /* Синий цвет для активной категории */
+    background-color: var(--tg-theme-button-color); /* Синий цвет для активной категории */
     color: var(--tg-theme-button-text-color);
 }
 
@@ -181,12 +182,17 @@ footer {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .swiper-slide {
       padding: 5px;
       width: 80%;
   }
   .swiper {
     height: auto; /* Allow the height to adjust on smaller screens */
+  }
+  .series-slide {
+    
+    width: 70%;
+   
   }
 }

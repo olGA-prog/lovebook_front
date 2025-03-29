@@ -3,7 +3,7 @@
 .container {
     width: 80%;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: var(--tg-theme-bg-color);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -24,27 +24,27 @@ header h1 {
 .selected-book-content {
     margin-bottom: 20px;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #5f5f5f;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: var(--tg-theme-section-bg-color);
 }
 
 .selected-book-content h2 {
     font-size: 1.8em;
-    color: #2c3e50;
+    color: var(--tg-theme-accent-text-color);
     margin-bottom: 10px;
 }
 
 .selected-book-content p {
     font-size: 1.1em;
-    color: #555;
+    color: var(--tg-theme-text-color);
 }
 
 form label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #333;
+    color: var(--tg-theme-text-color);
 }
 
 form input[type="text"],
@@ -52,21 +52,23 @@ form textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #5e5e5e;
     border-radius: 5px;
     font-size: 1em;
     transition: border-color 0.3s ease;
+    background-color: var(--tg-theme-secondary-bg-color);
+    color:var(--tg-theme-text-color) ;
 }
 
 form input[type="text"]:focus,
 form textarea:focus {
-    border-color: #3498db;
+    border-color: #5e5e5e;
     outline: none;
 }
 
 form button[type="submit"] {
-    background-color: #2ecc71;
-    color: white;
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
     padding: 14px 25px;
     border: none;
     border-radius: 5px;
@@ -77,13 +79,13 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-    background-color: #27ae60;
+    background-color: var(--tg-theme-button-color);
     transform: scale(1.05);
 }
 
 footer {
     text-align: center;
     margin-top: 30px;
-    color: #777;
+    color: var(--tg-theme-secondary-bg-color);
     font-size: 0.9em;
 }
