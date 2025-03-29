@@ -31,8 +31,10 @@ document.addEventListener("DOMContentLoaded", function() {
             idempotency_key: generateIdempotencyKey() // VERY IMPORTANT - generate this randomly!
         };
         try {
-            const payments =  CreatePayment(paymentData);
-            console.log(payments)
+            
+            //url = payments.confirmation_url
+            //alert(url)
+            window.location.href = "./payments.html"
           } catch (error) {
             
             console.error('Error loading data:', error);
