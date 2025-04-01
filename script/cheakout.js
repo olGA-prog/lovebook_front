@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const bookData = JSON.parse(localStorage.getItem("BookforBuy"));
   const userData = JSON.parse(localStorage.getItem("user"));
   const selectedBookContent = document.querySelector(".selected-book-content");
+  alert(userData)
 
   if (!bookData) {
     selectedBookContent.innerHTML = "<p>No book selected.</p>";

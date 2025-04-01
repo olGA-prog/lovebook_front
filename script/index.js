@@ -32,7 +32,8 @@ fetch(`${ApiURL}save_user/`, {
 .then(response => response.json())
 .then(data => {
   console.log('User saved on server:', data);
-  localStorage.setItem('user', JSON.stringify(data)); 
+  localStorage.setItem('user', JSON.stringify(data));
+  alert(JSON.stringify(data)) 
 
   console.log('User saved to localStorage');
 })
