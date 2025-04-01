@@ -30,7 +30,12 @@ fetch(`${ApiURL}save_user/`, {
       body: JSON.stringify(userData)
 })
 .then(response => response.json())
-.then(data => console.log('User saved:', data))
+.then(data => {
+  console.log('User saved on server:', data);
+  localStorage.setItem('user', JSON.stringify(data)); 
+
+  console.log('User saved to localStorage');
+})
 .catch(error => console.error('Error saving user:', error));
 }
 
