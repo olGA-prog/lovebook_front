@@ -7,7 +7,7 @@ const categoryFilter = document.querySelector(".category-filter");
 const searchInput = document.getElementById("search-input");
 let activeCategory = "all";
 let bookDataSave;
-const ApiURL = 'https://djangopro123.pythonanywhere.com/'
+const ApiURL = 'http://127.0.0.1:8000/'
 
 
 let tg = window.Telegram.WebApp; 

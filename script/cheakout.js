@@ -23,26 +23,16 @@ document.addEventListener("DOMContentLoaded", function() {
         alert(
           `Спасибо, ${name}! После оплаты книга "${bookData.title}" будет выслана на почту: ${email}.`
         );
-        const paymentData = {
-            amount: bookData.price,
-            bookData: bookData,
-            name: name,
-            email: email,
-            idempotency_key: generateIdempotencyKey() // VERY IMPORTANT - generate this randomly!
-        };
-        try {
-            
-            //url = payments.confirmation_url
-            //alert(url)
-            window.location.href = "./payments.html"
-          } catch (error) {
-            
-            console.error('Error loading data:', error);
-            bookGrid.textContent = 'Error loading books.';
-            authorSlider.textContent = 'Error loading authors.';
-          }
-
-        localStorage.removeItem("BookforBuy"); 
+        function handleBuyClick() {
+          const data = {
+            book_name: bookData.name,
+            price: bookData.price,
+            user_id: 456,
+            description: "Test Product"
+          };
+        
+          Telegram.WebApp.sendData(JSON.stringify(data)); 
+        }
       });
     } else {
       selectedBookContent.innerHTML = "<p>No book selected.</p>";
