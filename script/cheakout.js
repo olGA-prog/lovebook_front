@@ -25,19 +25,19 @@ document.addEventListener("DOMContentLoaded", function() {
       price: bookData.price,
     };
 
-    console.log("Sending data to bot:", data); // Добавляем логирование
+    console.log("Sending data to bot:", data); 
 
     tgCheak.sendData(JSON.stringify(data));
 
     tgCheak.onEvent('web_app_data', (event) => {
       try {
-        console.log("Received data from bot:", event.data); // Добавляем логирование
+        console.log("Received data from bot:", event.data); 
 
         const responseData = JSON.parse(event.data);
-        if (responseData && responseData.invoice_link) { // Проверяем, что объект responseData существует и содержит invoice_link
+        if (responseData && responseData.invoice_link) { 
           tgCheak.openInvoice(responseData.invoice_link);
         } else {
-          console.error('No invoice link received from bot or invalid format:', responseData); // Добавляем логирование
+          console.error('No invoice link received from bot or invalid format:', responseData);
           alert('Не удалось создать счет. Попробуйте позже.');
         }
       } catch (error) {
