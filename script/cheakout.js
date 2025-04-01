@@ -20,10 +20,12 @@ document.addEventListener("DOMContentLoaded", function() {
         price: bookData.price,
         user_id: userData.telegram_id,
       };
+      alert(data)
     
       tgCheck.sendData(JSON.stringify(data)); 
       tgCheck.onEvent('web_app_data', (event) => {
         try {
+          alert('send in bot')
           const responseData = JSON.parse(event.data);
           if (responseData.invoice_link) { 
             tgCheck.openInvoice(responseData.invoice_link);
