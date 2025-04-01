@@ -11,23 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
         <h2>${bookData.title}</h2>
         <p>Цена: ${bookData.price}</p>
       `;
-      const checkoutForm = document.getElementById("checkout-form");
-      const buttonSudmit =this.document.getElementById("button-sudmit")
-
-      checkoutForm.addEventListener("submit", function(event) {
-        event.preventDefault(); 
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("address").value; 
-        if (!name || !email) {
-          alert("Пожалуйста введите корректные значения!");
-          return;
-        }
-        
-      });
-    } else {
-      selectedBookContent.innerHTML = "<p>No book selected.</p>";
-    }
-
+      
+    const buttonSudmit =this.document.getElementById("button-sudmit")
     buttonSudmit.addEventListener("click", function(event) {
       event.preventDefault(); 
       const data = {
@@ -55,4 +40,4 @@ document.addEventListener("DOMContentLoaded", function() {
       
     });
  
-});
+  }});
