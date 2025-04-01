@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <p>Цена: ${bookData.price}</p>
       `;
       
-    const buttonSudmit =this.document.getElementById("button-sudmit")
+    const buttonSudmit =document.getElementById("button-sudmit")
     buttonSudmit.addEventListener("click", function(event) {
       event.preventDefault(); 
       const data = {
