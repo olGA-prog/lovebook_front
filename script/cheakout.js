@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
       
     const buttonSudmit =document.getElementById("button-sudmit")
     buttonSudmit.addEventListener("click", function(event) {
+      alert("click button")
       event.preventDefault(); 
       const data = {
         book_name: bookData.name,
