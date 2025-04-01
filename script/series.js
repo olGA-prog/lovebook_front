@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const seriesDetailsDiv = document.getElementById("series-details");
   const seriesBooksDiv = document.getElementById("series-books");
   const seriesNameSpan = document.getElementById("series-name");
-  const ApiURL = 'http://127.0.0.1:8000/'
+  const ApiURL = 'https://djangopro123.pythonanywhere.com'
 
   let seriesData = null
   try{
