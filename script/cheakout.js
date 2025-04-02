@@ -19,8 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const buttonSudmit = document.getElementById("button-sudmit");
   buttonSudmit.addEventListener("click", function(event) {
     event.preventDefault(); 
-    parsed_url = urlparse(bookData.ebook_file)
-    filename = os.path.basename(parsed_url.path)
+    filename = bookData.ebook_file.split('/')[-1]
 
     const data = {
       name: bookData.name, 
