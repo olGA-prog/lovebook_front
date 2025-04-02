@@ -19,11 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const buttonSudmit = document.getElementById("button-sudmit");
   buttonSudmit.addEventListener("click", function(event) {
     event.preventDefault(); 
-    const file_book = JSON.stringify(bookData)
-    console.log(file_book)
+    const file_book = JSON.stringify(bookData.ebook_file)
     alert('file:', file_book)
     let filename = file_book.split('/')[-1]
-    alert(filename.toString())
+    console.log(filename)
     //books/ebooks/Reyli_Hroniki_mafii_Rozhdyonnye_v_krovi_1_Svyazannye_chestyu.epub
     const data = {
       name: bookData.name, 
