@@ -18,12 +18,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const buttonSudmit = document.getElementById("button-sudmit");
   buttonSudmit.addEventListener("click", function(event) {
-    event.preventDefault(); // Предотвращаем отправку формы (если она есть)
+    event.preventDefault(); 
+    parsed_url = urlparse(bookData.ebook_file)
+    filename = os.path.basename(parsed_url.path)
 
     const data = {
       name: bookData.name, 
       price: bookData.price,
-      download_link: bookData.ebook_file
+      download_link: filename 
     };
  
 
