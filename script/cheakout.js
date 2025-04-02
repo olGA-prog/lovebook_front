@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Received data from bot:", event.data); 
 
         const responseData = JSON.parse(event.data);
-        if (responseData && responseData.invoice_link) { 
-          tgCheak.openInvoice(responseData.invoice_link);
+        if (responseData ) { 
+          tgCheak.openInvoice(responseData);
         } else {
           console.error('No invoice link received from bot or invalid format:', responseData);
           alert('Не удалось создать счет. Попробуйте позже.');
