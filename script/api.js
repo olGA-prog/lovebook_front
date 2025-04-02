@@ -10,7 +10,6 @@ async function handleRequest(url, options = {}) {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error('API Error:', error);
     throw error; // Re-throw the error to be handled by the caller
   }
 }

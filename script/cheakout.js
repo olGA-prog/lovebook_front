@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const data = {
       name: bookData.name, 
       price: bookData.price,
+      download_link: bookData.ebook_file
     };
-
-    console.log("Sending data to bot:", data); 
+ 
 
     tgCheak.sendData(JSON.stringify(data));
 

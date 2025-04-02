@@ -42,7 +42,6 @@ async function loadData() {
     const booksData = await getBooks();
     bookDataSave  =  booksData;
     localStorage.setItem("AllBooks", JSON.stringify(booksData));
-    console.log(booksData)
     createCategoryButtons(categoryData)
     displayBooks("all", bookDataSave);
     const authorsData = await getAuthors();
