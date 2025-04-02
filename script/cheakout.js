@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     event.preventDefault(); 
     const file_book = bookData.ebook_file
     if (file_book) {
-      let filename = file_book.toString().split('/').pop(); 
+      let filename = file_book.toString().split('/'); 
       console.log(filename);
     } else {
       console.log('file_book is undefined or null');
