@@ -20,9 +20,13 @@ document.addEventListener("DOMContentLoaded", function() {
   buttonSudmit.addEventListener("click", function(event) {
     event.preventDefault(); 
     const file_book = bookData.ebook_file
+    let filename;
+    let nameBook;
     if (file_book) {
-      let filename = file_book.toString().split('/'); 
-      console.log(filename);
+      filename = file_book.toString().split('/'); 
+      console.log(filename[5]);
+      nameBook = filename[5];
+
     } else {
       console.log('file_book is undefined or null');
     }
@@ -30,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const data = {
       name: bookData.name, 
       price: bookData.price,
-      download_link: filename 
+      download_link: nameBook 
     };
  
 
