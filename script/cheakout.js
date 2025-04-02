@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     event.preventDefault(); 
     const file_book = bookData.ebook_file
     console.log('file:', file_book)
-    let filename = file_book.split('/')[-1]
+    let filename = file_book.toString().split('/')[-1]
     console.log(filename)
     const data = {
       name: bookData.name, 
