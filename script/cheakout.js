@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
   buttonSudmit.addEventListener("click", function(event) {
     event.preventDefault(); 
     const file_book = JSON.stringify(bookData)
+    console.log(file_book)
     alert('file:', file_book)
     let filename = file_book.split('/')[-1]
     alert(filename.toString())
