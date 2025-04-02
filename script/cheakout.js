@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log('file:', file_book)
     let filename = file_book.split('/')[-1]
     console.log(filename)
-    //books/ebooks/Reyli_Hroniki_mafii_Rozhdyonnye_v_krovi_1_Svyazannye_chestyu.epub
     const data = {
       name: bookData.name, 
       price: bookData.price,
