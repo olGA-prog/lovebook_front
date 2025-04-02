@@ -13,7 +13,6 @@ const bookDescriptionContentElement = document.getElementById("book-description-
 
 const ApiURL = 'https://djangopro123.pythonanywhere.com';
 
-    // Mock category and author data for demonstration
 const categories = {
       1: "Fiction",
       2: "Mystery",
@@ -32,11 +31,8 @@ if (bookData) {
         bookTitleElement.textContent = bookData.title;
         bookImageElement.src = url_image;
         bookImageElement.alt = bookData.title;
-        // Find an author match, or return null if there isn't one
         bookAuthorElement.textContent = authors[bookData.author] ? authors[bookData.author] : 'Author data not found';
         bookYearElement.textContent = bookData.year_published;
-
-        // Display the book categories in a span, or null if a book category doesn't exist
         bookCategoriesElement.textContent = bookData.category_ids.map(id => categories[id] ? categories[id] : 'category data not found').join(", ");
         bookDescriptionContentElement.textContent = bookData.description;
         bookPriceElement.textContent = bookData.price;

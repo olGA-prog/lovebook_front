@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const authorBooksDiv = document.getElementById("author-books");
   const ApiURL = 'https://djangopro123.pythonanywhere.com'
 
- // Check for edge cases for proper properties
  let authorData = null
  try{
       authorData = JSON.parse(localStorage.getItem("selectedAuthor"));
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if (authorData) {
       url_image=`${ApiURL}/staticfiles/${authorData.image}.jpg`;
-      console.log(url_image)
       authorDetailsDiv.innerHTML = `
           <img src="${url_image}" alt="${authorData.name}">
           <div class="author-info">

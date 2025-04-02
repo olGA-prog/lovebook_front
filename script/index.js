@@ -13,7 +13,6 @@ const ApiURL = 'https://djangopro123.pythonanywhere.com'
 let tg = window.Telegram.WebApp; 
 tg.expand()
 const user = tg.initDataUnsafe.user; 
-alert(user)
 if (user) {
     const userData = {
     user_id: user.id.toString(),
